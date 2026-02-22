@@ -73,5 +73,3 @@ def team_checker(e):
         display(f"Congratulations! You are part of the {team}!", target="output")
     else:
         display("Invalid grade or section selection.", target="output")
-
-
