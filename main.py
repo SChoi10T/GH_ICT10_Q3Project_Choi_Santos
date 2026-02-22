@@ -46,25 +46,25 @@ def team_checker(e):
 
     # Team assignments: Uses Dictionary
     teams = {
-    ("Grade7", "Emerald"): ("Blue Bears", "images/blue-bears.png"),
-    ("Grade7", "Sapphire"): ("Green Hornets", "images/green-hornets.png"),
-    ("Grade7", "Ruby"): ("Red Bulldogs", "images/red-bulldogs.png"),
-    ("Grade7", "Topaz"): ("Yellow Tigers", "images/yellow-tigers.png"),
+    ("Grade7", "Emerald"): ("Blue Bears", "images/bears.jpg"),
+    ("Grade7", "Sapphire"): ("Green Hornets", "images/hornets.jpg"),
+    ("Grade7", "Ruby"): ("Red Bulldogs", "images/bulldogs.jpg"),
+    ("Grade7", "Topaz"): ("Yellow Tigers", "images/tigers.jpg"),
 
-    ("Grade8", "Emerald"): ("Green Hornets", "images/green-hornets.png"),
-    ("Grade8", "Sapphire"): ("Blue Bears", "images/blue-bears.png"),
-    ("Grade8", "Ruby"): ("Red Bulldogs", "images/red-bulldogs.png"),
-    ("Grade8", "Topaz"): ("Yellow Tigers", "images/yellow-tigers.png"),
+    ("Grade8", "Emerald"): ("Green Hornets", "images/hornets.jpg"),
+    ("Grade8", "Sapphire"): ("Blue Bears", "images/bears.jpg"),
+    ("Grade8", "Ruby"): ("Red Bulldogs", "images/bulldogs.jpg"),
+    ("Grade8", "Topaz"): ("Yellow Tigers", "images/tigers.jpg"),
 
-    ("Grade9", "Emerald"): ("Red Bulldogs", "images/red-bulldogs.png"),
-    ("Grade9", "Sapphire"): ("Yellow Tigers", "images/yellow-tigers.png"),
-    ("Grade9", "Ruby"): ("Blue Bears", "images/blue-bears.png"),
-    ("Grade9", "Topaz"): ("Green Hornets", "images/green-hornets.png"),
+    ("Grade9", "Emerald"): ("Red Bulldogs", "images/bulldogs.jpg"),
+    ("Grade9", "Sapphire"): ("Yellow Tigers", "images/tigers.jpg"),
+    ("Grade9", "Ruby"): ("Blue Bears", "images/bears.jpg"),
+    ("Grade9", "Topaz"): ("Green Hornets", "images/hornets.jpg"),
 
-    ("Grade10", "Emerald"): ("Yellow Tigers", "images/tigers.png"),
-    ("Grade10", "Sapphire"): ("Red Bulldogs", "images/bulldogs.png"),
-    ("Grade10", "Ruby"): ("Green Hornets", "images/hornets.png"),
-    ("Grade10", "Topaz"): ("Blue Bears", "images/bears.png"),
+    ("Grade10", "Emerald"): ("Yellow Tigers", "images/tigers.jpg"),
+    ("Grade10", "Sapphire"): ("Red Bulldogs", "images/bulldogs.jpg"),
+    ("Grade10", "Ruby"): ("Green Hornets", "images/hornets.jpg"),
+    ("Grade10", "Topaz"): ("Blue Bears", "images/bears.jpg"),
 }
     # Find team
     team = teams.get((grade_value, section_value))
@@ -74,3 +74,4 @@ def team_checker(e):
     else:
 
         display("Invalid grade or section selection.", target="output")
+
