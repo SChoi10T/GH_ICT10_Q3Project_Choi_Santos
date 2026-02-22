@@ -1,4 +1,4 @@
-from pyscript import display, document # pyright: ignore[reportMissingImports]
+     from pyscript import display, document # pyright: ignore[reportMissingImports]
 
 # Account Creation
 def account_creation(e):
@@ -46,35 +46,31 @@ def team_checker(e):
 
     # Team assignments: Uses Dictionary
     teams = {
-        # Grade 7
-        ("Grade7", "Emerald"): "Blue Bears",
-        ("Grade7", "Sapphire"): "Green Hornets",
-        ("Grade7", "Ruby"): "Red Bulldogs",
-        ("Grade7", "Topaz"): "Yellow Tigers",
+    ("Grade7", "Emerald"): ("Blue Bears", "images/blue-bears.png"),
+    ("Grade7", "Sapphire"): ("Green Hornets", "images/green-hornets.png"),
+    ("Grade7", "Ruby"): ("Red Bulldogs", "images/red-bulldogs.png"),
+    ("Grade7", "Topaz"): ("Yellow Tigers", "images/yellow-tigers.png"),
 
-        # Grade 8
-        ("Grade8", "Emerald"): "Green Hornets",
-        ("Grade8", "Sapphire"): "Blue Bears",
-        ("Grade8", "Ruby"): "Red Bulldogs",
-        ("Grade8", "Topaz"): "Yellow Tigers",
+    ("Grade8", "Emerald"): ("Green Hornets", "images/green-hornets.png"),
+    ("Grade8", "Sapphire"): ("Blue Bears", "images/blue-bears.png"),
+    ("Grade8", "Ruby"): ("Red Bulldogs", "images/red-bulldogs.png"),
+    ("Grade8", "Topaz"): ("Yellow Tigers", "images/yellow-tigers.png"),
 
-        # Grade 9
-        ("Grade9", "Emerald"): "Red Bulldogs",
-        ("Grade9", "Sapphire"): "Yellow Tigers",
-        ("Grade9", "Ruby"): "Blue Bears",
-        ("Grade9", "Topaz"): "Green Hornets",
+    ("Grade9", "Emerald"): ("Red Bulldogs", "images/red-bulldogs.png"),
+    ("Grade9", "Sapphire"): ("Yellow Tigers", "images/yellow-tigers.png"),
+    ("Grade9", "Ruby"): ("Blue Bears", "images/blue-bears.png"),
+    ("Grade9", "Topaz"): ("Green Hornets", "images/green-hornets.png"),
 
-        # Grade 10
-        ("Grade10", "Emerald"): "Yellow Tigers",
-        ("Grade10", "Sapphire"): "Red Bulldogs",
-        ("Grade10", "Ruby"): "Green Hornets",
-        ("Grade10", "Topaz"): "Blue Bears",
-    }
-
+    ("Grade10", "Emerald"): ("Yellow Tigers", "images/tigers.png"),
+    ("Grade10", "Sapphire"): ("Red Bulldogs", "images/bulldogs.png"),
+    ("Grade10", "Ruby"): ("Green Hornets", "images/hornets.png"),
+    ("Grade10", "Topaz"): ("Blue Bears", "images/bears.png"),
+}
     # Find team
     team = teams.get((grade_value, section_value))
 
     if team:
         display(f"Congratulations! You are part of the {team}!", target="output")
     else:
+
         display("Invalid grade or section selection.", target="output")
