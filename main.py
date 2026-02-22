@@ -1,4 +1,4 @@
- from pyscript import display, document # pyright: ignore[reportMissingImports]
+from pyscript import display, document # pyright: ignore[reportMissingImports]
 
 # Account Creation
 def account_creation(e):
@@ -46,32 +46,49 @@ def team_checker(e):
 
     # Team assignments: Uses Dictionary
     teams = {
-    ("Grade7", "Emerald"): ("Blue Bears", "images/bears.jpg"),
-    ("Grade7", "Sapphire"): ("Green Hornets", "images/hornets.jpg"),
-    ("Grade7", "Ruby"): ("Red Bulldogs", "images/bulldogs.jpg"),
-    ("Grade7", "Topaz"): ("Yellow Tigers", "images/tigers.jpg"),
+    ("Grade7", "Emerald"): ("Blue Bears"),
+    ("Grade7", "Sapphire"): ("Green Hornets"),
+    ("Grade7", "Ruby"): ("Red Bulldogs"),
+    ("Grade7", "Topaz"): ("Yellow Tigers"),
 
-    ("Grade8", "Emerald"): ("Green Hornets", "images/hornets.jpg"),
-    ("Grade8", "Sapphire"): ("Blue Bears", "images/bears.jpg"),
-    ("Grade8", "Ruby"): ("Red Bulldogs", "images/bulldogs.jpg"),
-    ("Grade8", "Topaz"): ("Yellow Tigers", "images/tigers.jpg"),
+    ("Grade8", "Emerald"): ("Green Hornets"),
+    ("Grade8", "Sapphire"): ("Blue Bears"),
+    ("Grade8", "Ruby"): ("Red Bulldogs"),
+    ("Grade8", "Topaz"): ("Yellow Tigers"),
 
-    ("Grade9", "Emerald"): ("Red Bulldogs", "images/bulldogs.jpg"),
-    ("Grade9", "Sapphire"): ("Yellow Tigers", "images/tigers.jpg"),
-    ("Grade9", "Ruby"): ("Blue Bears", "images/bears.jpg"),
-    ("Grade9", "Topaz"): ("Green Hornets", "images/hornets.jpg"),
+    ("Grade9", "Emerald"): ("Red Bulldogs"),
+    ("Grade9", "Sapphire"): ("Yellow Tigers"),
+    ("Grade9", "Ruby"): ("Blue Bears"),
+    ("Grade9", "Topaz"): ("Green Hornets"),
 
-    ("Grade10", "Emerald"): ("Yellow Tigers", "images/tigers.jpg"),
-    ("Grade10", "Sapphire"): ("Red Bulldogs", "images/bulldogs.jpg"),
-    ("Grade10", "Ruby"): ("Green Hornets", "images/hornets.jpg"),
-    ("Grade10", "Topaz"): ("Blue Bears", "images/bears.jpg"),
+    ("Grade10", "Emerald"): ("Yellow Tigers"),
+    ("Grade10", "Sapphire"): ("Red Bulldogs"),
+    ("Grade10", "Ruby"): ("Green Hornets"),
+    ("Grade10", "Topaz"): ("Blue Bears")
 }
+
     # Find team
     team = teams.get((grade_value, section_value))
 
     if team:
-display(f"Congratulations! You are part of the {team}!", target="output")
+        display(f"Congratulations! You are part of the {team}!", target="output")
     else:
         display("Invalid grade or section selection.", target="output")
 
+# List of Players
+def player_list(e):
+    document.getElementById("output").innerHTML = "" # Clear Output
 
+    # List of Classmates as players
+    players = ['1) Abdullah', '2) Abeleda', '3) Arce', '4) Arias', '5) Bonzon', '6) Cajucom', '7) Catimbang', '8) Choi', '9) Cotioco', '10) Daradal', '11) Enriquez', '12) Escobar', '13) Espina', '14) Gano', '15) Garcia', '16) Kaur', '17) Ong', '18) Rufo', '19) Sanchez', '20) Santos', '21) Tan', '22) Vilale', '23) Yao', '24) Zosa']
+    
+    # For loop, displays the list
+    for player in players:
+        display(player, target="output")
+    
+    # While loop, counts the list until the maximum number of players
+    count = 0 # Counter Variable
+    while count < len(players):
+        count += 1 # Updates it, preventing an infinite loop
+
+    display(f"Total Players: {count}", target="output")
