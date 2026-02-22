@@ -42,10 +42,6 @@ body {
     border-radius: 20px;
 }
 
-.container h1 {
-    margin-bottom: 20px;
-}
-
 #output {
     margin-top: 40px;
     background-color: #efefef;
@@ -72,4 +68,5 @@ body {
 
 .footer a:hover {
     color: #c5c5c5;
+
 }
