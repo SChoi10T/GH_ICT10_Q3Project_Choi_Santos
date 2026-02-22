@@ -46,32 +46,36 @@ def team_checker(e):
 
     # Team assignments: Uses Dictionary
     teams = {
-    ("Grade7", "Emerald"): ("Blue Bears"),
-    ("Grade7", "Sapphire"): ("Green Hornets"),
-    ("Grade7", "Ruby"): ("Red Bulldogs"),
-    ("Grade7", "Topaz"): ("Yellow Tigers"),
+    ("Grade7", "Emerald"): ("Blue Bears", "images/bears.jpg"),
+    ("Grade7", "Sapphire"): ("Green Hornets", "images/hornets.jpg"),
+    ("Grade7", "Ruby"): ("Red Bulldogs", "images/bulldogs.jpg"),
+    ("Grade7", "Topaz"): ("Yellow Tigers", "images/tigers.jpg"),
 
-    ("Grade8", "Emerald"): ("Green Hornets"),
-    ("Grade8", "Sapphire"): ("Blue Bears"),
-    ("Grade8", "Ruby"): ("Red Bulldogs"),
-    ("Grade8", "Topaz"): ("Yellow Tigers"),
+    ("Grade8", "Emerald"): ("Green Hornets", "images/hornets.jpg"),
+    ("Grade8", "Sapphire"): ("Blue Bears", "images/bears.jpg"),
+    ("Grade8", "Ruby"): ("Red Bulldogs", "images/bulldogs.jpg"),
+    ("Grade8", "Topaz"): ("Yellow Tigers", "images/tigers.jpg"),
 
-    ("Grade9", "Emerald"): ("Red Bulldogs"),
-    ("Grade9", "Sapphire"): ("Yellow Tigers"),
-    ("Grade9", "Ruby"): ("Blue Bears"),
-    ("Grade9", "Topaz"): ("Green Hornets"),
+    ("Grade9", "Emerald"): ("Red Bulldogs", "images/bulldogs.jpg"),
+    ("Grade9", "Sapphire"): ("Yellow Tigers", "images/tigers.jpg"),
+    ("Grade9", "Ruby"): ("Blue Bears", "images/bears.jpg"),
+    ("Grade9", "Topaz"): ("Green Hornets", "images/hornets.jpg"),
 
-    ("Grade10", "Emerald"): ("Yellow Tigers"),
-    ("Grade10", "Sapphire"): ("Red Bulldogs"),
-    ("Grade10", "Ruby"): ("Green Hornets"),
-    ("Grade10", "Topaz"): ("Blue Bears")
+    ("Grade10", "Emerald"): ("Yellow Tigers", "images/tigers.jpg"),
+    ("Grade10", "Sapphire"): ("Red Bulldogs", "images/bulldogs.jpg"),
+    ("Grade10", "Ruby"): ("Green Hornets", "images/hornets.jpg"),
+    ("Grade10", "Topaz"): ("Blue Bears", "images/bears.jpg")
 }
 
     # Find team
     team = teams.get((grade_value, section_value))
 
     if team:
-        display(f"Congratulations! You are part of the {team}!", target="output")
+        team_name, team_image = team
+        document.getElementById("output").innerHTML = f"""
+        <p>Congratulations! You are part of the {team_name}!</p>
+        <img src="{team_image}" width="300" class="img-fluid mt-3">
+    """
     else:
         display("Invalid grade or section selection.", target="output")
 
