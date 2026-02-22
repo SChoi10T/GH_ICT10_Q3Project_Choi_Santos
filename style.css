@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* NAVIGATION BAR */
+    .navbar-brand img {
+        width: 50px;
+    }
+
+    .nav-link.active {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .active {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+
+body {
+    background-image: url('background.png');
+    background-position: center;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container-sm {
+    text-align: center;
+    padding: 50px;
+    width: 500px;
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+}
+
+#output {
+    margin-top: 40px;
+    background-color: #efefef;
+    border-radius: 20px;
+    outline: 8px double #ffffff;
+    padding: 30px;
+    color: #000000;
+    text-align: center
+}
+
+.footer {
+    text-align: center;
+    background: #000000;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(74, 74, 74, 1) 100%);
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.footer a:hover {
+    color: #c5c5c5;
+}
