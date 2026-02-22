@@ -1,4 +1,4 @@
-     from pyscript import display, document # pyright: ignore[reportMissingImports]
+from pyscript import display, document # pyright: ignore[reportMissingImports]
 
 # Account Creation
 def account_creation(e):
@@ -72,6 +72,6 @@ def team_checker(e):
     if team:
         display(f"Congratulations! You are part of the {team}!", target="output")
     else:
-
         display("Invalid grade or section selection.", target="output")
+
 
