@@ -70,6 +70,18 @@ def team_checker(e):
     team = teams.get((grade_value, section_value))
 
     if team:
-        display(f"Congratulations! You are part of the {team}!", target="output")
+ display(f"""
+        <div class="card text-center mt-3 shadow">
+            <div class="card-body">
+                <h3 class="card-title">Congratulations!</h3>
+                <p class="card-text">
+                    You are part of the <strong>{team_name}</strong>!
+                </p>
+                <img src="{team_image}" class="img-fluid mt-3 rounded" style="max-width:250px;">
+            </div>
+        </div>
+        """, target="output")
+
     else:
         display("Invalid grade or section selection.", target="output")
+
